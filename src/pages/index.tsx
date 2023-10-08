@@ -7,7 +7,7 @@ function HeroBanner() {
 
   return <section className="my-24 flex flex-col gap-2 items-start">
     <h1 className="text-6xl py-1 font-bold">Icon Generator</h1>
-    <p className="text-2xl pb-6 font-medium">Use AI to generate icons in one easy step</p>
+    <p className="text-2xl pb-6 font-medium">Use AI to generate icons in a few easy steps</p>
     <PrimaryLinkButton href='/generate'>
       Get started
     </PrimaryLinkButton>
