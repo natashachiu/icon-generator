@@ -11,7 +11,11 @@ const config = {
   reactStrictMode: true,
 
   images: {
-    domains: ["oaidalleapiprodscus.blob.core.windows.net"]
+    domains: [
+      "oaidalleapiprodscus.blob.core.windows.net",
+      "icon-generator-icons.s3.us-east-2.amazonaws.com",
+      "icon-generator-icons.s3.amazonaws.com"
+    ]
   },
 
   /**
