@@ -8,7 +8,7 @@ import { Button } from "~/component/Button";
 import Image from "next/image";
 
 const colors = ['orange', 'yellow', 'red', 'pink', 'purple', 'green', 'teal', 'blue', 'black', 'white', 'gray'];
-const styles = ['vector', 'claymorphic', 'realistic', 'metallic iridescent', 'pixelated', 'retro', 'cartoon', 'watercolor', 'abstract', 'cubist', 'bauhaus'];
+const styles = ['vector', 'claymorphic', 'realistic', 'metallic iridescent', 'pixel art', 'retro', 'cartoon', 'abstract', 'cubist'];
 
 const GeneratePage: NextPage = () => {
 

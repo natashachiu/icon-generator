@@ -3,18 +3,17 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { Button } from "./Button";
 
 export function Header() {
-
-  const session = useSession();
-
-  const isLoggedIn = !!session.data;
-
+  const { data: session } = useSession();
+  const isLoggedIn = !!session;
 
   return <header className="flex justify-between px-10 h-16 items-center dark:bg-slate-800 bg-purple-50">
     <PrimaryLink href="/">Icon Generator</PrimaryLink>
     <ul className="flex gap-8">
-      <li>
-        <PrimaryLink href="/generate">Generate</PrimaryLink>
-      </li>
+      {isLoggedIn && (
+        <li>
+          <PrimaryLink href="/generate">Generate</PrimaryLink>
+        </li>
+      )}
       <li>
         <PrimaryLink href="/community">Community Icons</PrimaryLink>
       </li>
@@ -26,12 +25,12 @@ export function Header() {
     </ul>
     <ul>{isLoggedIn ?
       <li>
-        <Button variant='secondary' onClick={() => signOut().catch(console.error)}>
+        <Button variant='secondary' onClick={() => signOut()}>
           Logout
         </Button>
       </li> :
       <li>
-        <Button onClick={() => signIn().catch(console.error)}>
+        <Button onClick={() => signIn()}>
           Login
         </Button>
       </li>}</ul>
