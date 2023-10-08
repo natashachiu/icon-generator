@@ -1,7 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import { Button } from "~/component/Button";
-import { PrimaryLink } from "~/component/PrimaryLink";
+
 import { PrimaryLinkButton } from "~/component/PrimaryLinkButton";
 
 function HeroBanner() {
